@@ -42,7 +42,7 @@ public class DemoSecurityConfig {
                 .loginPage("/showMyLoginPage") //phải code controller này
                 .loginProcessingUrl("/authenticateTheUser") //framework hỗ trợ sẵn controller này
                 .permitAll()
-            );
+            ).logout(logout->logout.permitAll());  //-> sẽ ứng với default controller /logout
         return http.build();
     }
 }
