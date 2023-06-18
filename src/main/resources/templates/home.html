@@ -14,6 +14,18 @@
         <br><br>
         Role: <span sec:authentication="principal.authorities"></span>
     </p>
+
+    <!-- Add a link to point to /leaders... this is for the managers-->
+    <p>
+        <a th:href="@{/leaders}">Leadership Meeting</a>
+        (Only for Manager peeps)
+    </p>
+    <p>
+        <a th:href="@{/systems}">Admin Meeting</a>
+        (Only for Admin peeps)
+    </p>
+
+
     Welcome to the luv2code company homepage!
     <form action="#" th:action="@{/logout}" method="POST">
         <input type="submit" value="Logout" />
