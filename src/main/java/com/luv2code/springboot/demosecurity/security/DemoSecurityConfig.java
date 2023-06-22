@@ -46,6 +46,7 @@ public class DemoSecurityConfig {
     public UserDetailsManager userDetailsManager(DataSource dataSource){
         return new JdbcUserDetailsManager(dataSource);
     }
+    //NO CHANGE TO USE BCRYPT
 
 
     @Bean
